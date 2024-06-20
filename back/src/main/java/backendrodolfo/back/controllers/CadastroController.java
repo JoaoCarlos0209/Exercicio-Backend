@@ -11,14 +11,14 @@ import backendrodolfo.back.entities.Cadastro;
 import backendrodolfo.back.services.CadastroService;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/cadastro")
 public class CadastroController {
     
     @Autowired
     CadastroService service;
 
 
-    @PostMapping("/cadastro")
+    @PostMapping
     public ResponseEntity<String> cadastro(Cadastro cadastro){
         return new ResponseEntity<>(service.cadastro(cadastro), HttpStatus.OK);
     }

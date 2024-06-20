@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import backendrodolfo.back.services.LoginService;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/login")
 public class LoginController {
     
     @Autowired
     LoginService service;
     
-    @PostMapping("/login")
+    @PostMapping
     public ResponseEntity<String> login(String cpf, String senha){
         return (service.login(cpf, senha));
     }
